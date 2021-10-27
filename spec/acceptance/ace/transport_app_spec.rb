@@ -165,6 +165,7 @@ RSpec.describe ACE::TransportApp do
           expect(last_response).to be_ok
           expect(last_response.status).to eq(200)
           result = JSON.parse(last_response.body)
+          puts result
           expect(result['status']).to eq('success')
         end
       end
